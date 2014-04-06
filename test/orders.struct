@@ -1,3 +1,5 @@
+# //////////////////////////////////////////////////////////////////////////////
+
 #
 # Textual model of the 'order' object
 # ------------------------------------
@@ -33,8 +35,18 @@
 # Filter it out before you invoke the regex!
 #
 
-# fieldname, start, length, type, alignment, obligatory, fillChar
+# //////////////////////////////////////////////////////////////////////////////
+
+####
+# description of the textual model
+####
+
+# fieldName, start, length, type, alignment, obligatory, fillChar
 # CustomerID, 1,      12,     N,      R,         Y,        "#";  # Customer number
+
+####
+# the model
+####
 
 CustomerID, 1,   12, N,  R, Y, "#";  # Customer number
 OrderID,    13,  12, N,  R, Y, " ";  # Order number
