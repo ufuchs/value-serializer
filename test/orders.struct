@@ -9,4 +9,4 @@ OrderDate,  25,  10, AN, L, M, " ";
 Item,       35,  30, AN, L, M, " ";
 Qty,        65,   4, N,  L, M, " ";
 Price,      69,  10, N,  L, M, "#";
-Note,       79,  30, AN, L, K, " ";
+Note,       79,  50, AN, L, K, " ";
