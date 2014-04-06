@@ -1,0 +1,24 @@
+{
+  "name": "value-serializer",
+  "version": "0.1.0",
+  "description": "Serializes the property values of an Javascript object by a given rule set",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ufuchs/value-serializer"
+  },
+  "keywords": [
+    "Property",
+    "value",
+    "serialization"
+  ],
+  "author": "Uli Fuchs <ufuchs@gmx.com>",
+  "license": "GPLv2",
+  "bugs": {
+    "url": "https://github.com/ufuchs/value-serializer/issues"
+  },
+  "homepage": "https://github.com/ufuchs/value-serializer"
+}
