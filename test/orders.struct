@@ -1,12 +1,45 @@
-# Order
+#
+# Textual model of the 'order' object
+# ------------------------------------
+#
+# In place of writting the 'orders.json' by hand it's a simpler approach to
+# use a model. (Other guys call it a 'Domain specific language' aka 'DSL'.)
+#
+# The regex to split the model reads as follow:
+# match = line.match(/^(\w+),\s*(\d+),\s*(\d+),\s*(\w+),\s*(\w+),\s*(\w+),\s*"([^"])"/)
+# (It also sorts out the trailing the comments.)
+#
+# Then you can build the field descriptor for a single field:
+#  {
+#        lineNum : num,
+#        fieldName: match[1][0].toLowerCase() + match[1].slice(1),
+#        start: +(match[2]),
+#        length: +(match[3]),
+#        type: match[4],
+#        alignment: match[5],
+#        obligatory: match[6],
+#        fillChar: match[7] === '' ? ' ' : match[7]
+# };
+#
+# Next push it into an array.
+#
+# Now you have the chance to use all this 'array.forEach/map/reduce'-
+# functionality to check/validate your model e.g checking for missing fields or
+# checking for 'prevProp.start + prevProp.length !== currentProp.start' in case
+# of complex scenarios.
+#
+# Note:
+# Be aware of comments. Starting with '#' and any empty lines.
+# Filter it out before you invoke the regex!
+#
 
 # fieldname, start, length, type, alignment, obligatory, fillChar
-# CustomerID, 1,      12,     N,      R,         M,        "#";  # Customer number
+# CustomerID, 1,      12,     N,      R,         Y,        "#";  # Customer number
 
-CustomerID, 1,   12, N,  R, M, "#";  # Customer number
-OrderID,    13,  12, N,  R, M, " ";  # Order number
-OrderDate,  25,  10, AN, L, M, " ";
-Item,       35,  30, AN, L, M, " ";
-Qty,        65,   4, N,  L, M, " ";
-Price,      69,  10, N,  L, M, "#";
-Note,       79,  50, AN, L, K, " ";
+CustomerID, 1,   12, N,  R, Y, "#";  # Customer number
+OrderID,    13,  12, N,  R, Y, " ";  # Order number
+OrderDate,  25,  10, AN, L, Y, " ";
+Item,       35,  30, AN, L, Y, " ";
+Qty,        65,   4, N,  R, Y, " ";
+Price,      69,  10, N,  R, Y, "#";
+Note,       79,  50, AN, L, N, " ";

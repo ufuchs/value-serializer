@@ -46,7 +46,7 @@
         "start": 65,
         "length": 4,
         "type": "N",
-        "alignment": "L",
+        "alignment": "R",
         "obligatory": "M",
         "fillChar": " "
         },
@@ -56,7 +56,7 @@
         "start": 69,
         "length": 10,
         "type": "N",
-        "alignment": "L",
+        "alignment": "R",
         "obligatory": "M",
         "fillChar": "#"
         },

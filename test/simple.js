@@ -17,7 +17,9 @@ console.log("---------------------------------------------\n");
 
 order.customerID = 1034056;
 order.orderID = 5670876;
-order.orderDate = new Date().toISOString().replace(/^(\d{4})\-(\d{2})\-(\d{2}).*$/, '$2/$3/$1');
+order.orderDate = new Date()
+    .toISOString()
+    .replace(/^(\d{4})\-(\d{2})\-(\d{2}).*$/, '$2/$3/$1');
 order.item = 'ATmega328P-PU';
 order.qty = 10;
 order.price = 2.02;
@@ -28,6 +30,6 @@ console.log(order);
 console.log("\n3.0 Serialize the order object for your legacy bookkeeping system");
 console.log("-----------------------------------------------------------------\n");
 
-serialized = serializer().serialize(order, descriptors);
+serialized = serializer().serialize(order, descriptors, '|');
 
 console.log(serialized);
