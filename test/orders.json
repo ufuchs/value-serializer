@@ -25,7 +25,7 @@
         "fieldName": "orderDate",
         "start": 25,
         "length": 10,
-        "type": "AN",
+        "type": "D",
         "alignment": "L",
         "obligatory": "Y",
         "fillChar": " "
