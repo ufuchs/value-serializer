@@ -7,7 +7,7 @@
         "length": 12,
         "type": "N",
         "alignment": "R",
-        "obligatory": "M",
+        "obligatory": "Y",
         "fillChar": "#"
         },
         {
@@ -17,7 +17,7 @@
         "length": 12,
         "type": "N",
         "alignment": "R",
-        "obligatory": "M",
+        "obligatory": "Y",
         "fillChar": " "
         },
         {
@@ -27,7 +27,7 @@
         "length": 10,
         "type": "AN",
         "alignment": "L",
-        "obligatory": "M",
+        "obligatory": "Y",
         "fillChar": " "
         },
         {
@@ -37,7 +37,7 @@
         "length": 30,
         "type": "AN",
         "alignment": "L",
-        "obligatory": "M",
+        "obligatory": "Y",
         "fillChar": " "
         },
         {
@@ -47,7 +47,7 @@
         "length": 4,
         "type": "N",
         "alignment": "R",
-        "obligatory": "M",
+        "obligatory": "Y",
         "fillChar": " "
         },
         {
@@ -57,7 +57,7 @@
         "length": 10,
         "type": "N",
         "alignment": "R",
-        "obligatory": "M",
+        "obligatory": "Y",
         "fillChar": "#"
         },
         {
@@ -67,7 +67,7 @@
         "length": 50,
         "type": "AN",
         "alignment": "L",
-        "obligatory": "K",
+        "obligatory": "N",
         "fillChar": " "
         }
     ]

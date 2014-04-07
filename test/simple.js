@@ -30,6 +30,6 @@ console.log(order);
 console.log("\n3.0 Serialize the order object for your legacy bookkeeping system");
 console.log("-----------------------------------------------------------------\n");
 
-serialized = serializer().serialize(order, descriptors, '|');
+serialized = serializer().serialize(order, {descriptors : descriptors}, '|');
 
 console.log(serialized);
