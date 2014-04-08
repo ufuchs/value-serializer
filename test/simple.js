@@ -7,13 +7,13 @@ var serializer = require('../lib/value-serializer'),
     order = serializer().createObjectFrom(descriptors),
     serialized;
 
-console.log("\n1. Generate an order object by use of 'order.json'");
-console.log("--------------------------------------------------\n");
+console.log("\n1. Generate an 'order' object by use of 'order.json'");
+console.log("----------------------------------------------------\n");
 
 console.log(order);
 
-console.log("\n2. Now fill in some data in your order object");
-console.log("---------------------------------------------\n");
+console.log("\n2. Now fill in some data in your 'order' object");
+console.log("-----------------------------------------------\n");
 
 order.customerID = 1034056;
 order.orderID = 5670876;
@@ -27,9 +27,16 @@ order.note = "special customer with 5% discount";
 
 console.log(order);
 
-console.log("\n3.0 Serialize the order object for your legacy bookkeeping system");
+console.log("\n4.0 Validate the 'order' object against model.");
 console.log("-----------------------------------------------------------------\n");
 
-serialized = serializer().serialize(order, {descriptors : descriptors}, '|');
+serializer().validate(order, descriptors);
 
-console.log(serialized);
+console.log("\n  If you doesn't see any output, feel lucky!\n");
+
+console.log("\n5.0 Serialize the 'order' object for your legacy bookkeeping system");
+console.log("-------------------------------------------------------------------\n");
+
+serialized = serializer().serialize(order, descriptors, '|');
+
+console.log(serialized + '\n');
