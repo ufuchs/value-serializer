@@ -41,6 +41,9 @@ serialized = serializer().serialize(order, descriptors);
 
 console.log(serialized + '\n');
 
-console.log(serialized.length + '\n');
+console.log("\n6.0 Deserialize the 'order' object from output string");
+console.log("-----------------------------------------------------\n");
+
+console.log("  At present in raw format. Needs some regexs to correct.\n");
 
 console.log(serializer().deserialize(serialized, descriptors));
