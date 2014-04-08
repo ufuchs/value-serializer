@@ -7,8 +7,8 @@ var serializer = require('../lib/value-serializer'),
     order = serializer().createObjectFrom(descriptors),
     serialized;
 
-console.log("\n1. Generate an 'order' object by use of 'order.json'");
-console.log("----------------------------------------------------\n");
+console.log("\n1. Generate an empty 'order' object by use of 'order.json', the model");
+console.log("---------------------------------------------------------------------\n");
 
 console.log(order);
 
@@ -28,7 +28,7 @@ order.note = "special customer with 5% discount";
 console.log(order);
 
 console.log("\n4.0 Validate the 'order' object against model.");
-console.log("-----------------------------------------------------------------\n");
+console.log("----------------------------------------------\n");
 
 serializer().validate(order, descriptors);
 
@@ -41,9 +41,9 @@ serialized = serializer().serialize(order, descriptors);
 
 console.log(serialized + '\n');
 
-console.log("\n6.0 Deserialize the 'order' object from output string");
-console.log("-----------------------------------------------------\n");
+console.log("\n6.0 Deserialize the 'order' object from the generated output string");
+console.log("-------------------------------------------------------------------\n");
 
-console.log("  At present in raw format. Needs some regexs to correct.\n");
+console.log("  *** At present in raw format. Needs some regexs to correct.***\n");
 
 console.log(serializer().deserialize(serialized, descriptors));
