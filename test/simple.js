@@ -37,6 +37,10 @@ console.log("\n  If you doesn't see any output, feel lucky!\n");
 console.log("\n5.0 Serialize the 'order' object for your legacy bookkeeping system");
 console.log("-------------------------------------------------------------------\n");
 
-serialized = serializer().serialize(order, descriptors, '|');
+serialized = serializer().serialize(order, descriptors);
 
 console.log(serialized + '\n');
+
+console.log(serialized.length + '\n');
+
+console.log(serializer().deserialize(serialized, descriptors));
