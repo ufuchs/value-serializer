@@ -19,7 +19,7 @@ order.customerID = 1034056;
 order.orderID = 5670876;
 order.orderDate = new Date()
     .toISOString()
-    .replace(/^(\d{4})\-(\d{2})\-(\d{2}).*$/, '$2/$3/$1');
+    .replace(/^(\d{4})\-(\d{2})\-(\d{2})\S*$/, '$2/$3/$1');
 order.item = 'ATmega328P-PU';
 order.qty = 10;
 order.price = 2.02;
@@ -43,7 +43,5 @@ console.log(serialized + '\n');
 
 console.log("\n6.0 Deserialize the 'order' object from the generated output string");
 console.log("-------------------------------------------------------------------\n");
-
-console.log("  *** At present in raw format. Needs some regexs to correct.***\n");
 
 console.log(serializer().deserialize(serialized, descriptors));

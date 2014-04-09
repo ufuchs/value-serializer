@@ -58,7 +58,7 @@
         "type": "N",
         "alignment": "R",
         "obligatory": "Y",
-        "fillChar": "#"
+        "fillChar": "."
         },
         {
         "lineNum": 9,
