@@ -1,0 +1,54 @@
+{
+    "oilInvo" :[
+      {
+        "lineNum": 8,
+        "fieldName": "type",
+        "start": 1,
+        "length": 4,
+        "type": "AN",
+        "alignment": "R",
+        "obligatory": "Y",
+        "fillChar": "INVO"
+      },
+      {
+        "lineNum": 9,
+        "fieldName": "customerID",
+        "start": 5,
+        "length": 5,
+        "type": "N",
+        "alignment": "R",
+        "obligatory": "Y",
+        "fillChar": " "
+      },
+      {
+        "lineNum": 10,
+        "fieldName": "invoiceDate",
+        "start": 10,
+        "length": 10,
+        "type": "AN",
+        "alignment": "R",
+        "obligatory": "Y",
+        "fillChar": " "
+      },
+      {
+        "lineNum": 11,
+        "fieldName": "invoiceAmount",
+        "start": 20,
+        "length": 8,
+        "type": "N",
+        "alignment": "L",
+        "obligatory": "Y",
+        "fillChar": " "
+      },
+      {
+        "lineNum": 12,
+        "fieldName": "text",
+        "start": 28,
+        "length": 32,
+        "type": "AN",
+        "alignment": "L",
+        "obligatory": "Y",
+        "fillChar": " "
+      }
+    ]
+}

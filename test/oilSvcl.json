@@ -1,0 +1,54 @@
+{
+    "oilSvcl" :[
+      {
+        "lineNum": 7,
+        "fieldName": "type",
+        "start": 1,
+        "length": 4,
+        "type": "AN",
+        "alignment": "R",
+        "obligatory": "Y",
+        "fillChar": "SVCL"
+      },
+      {
+        "lineNum": 8,
+        "fieldName": "customerID",
+        "start": 5,
+        "length": 5,
+        "type": "N",
+        "alignment": "R",
+        "obligatory": "Y",
+        "fillChar": " "
+      },
+      {
+        "lineNum": 9,
+        "fieldName": "customerName",
+        "start": 10,
+        "length": 22,
+        "type": "AN",
+        "alignment": "R",
+        "obligatory": "Y",
+        "fillChar": " "
+      },
+      {
+        "lineNum": 10,
+        "fieldName": "typeCode",
+        "start": 32,
+        "length": 2,
+        "type": "N",
+        "alignment": "L",
+        "obligatory": "Y",
+        "fillChar": " "
+      },
+      {
+        "lineNum": 11,
+        "fieldName": "requestText",
+        "start": 34,
+        "length": 22,
+        "type": "AN",
+        "alignment": "L",
+        "obligatory": "Y",
+        "fillChar": " "
+      }
+    ]
+}

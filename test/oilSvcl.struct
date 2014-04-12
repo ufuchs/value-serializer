@@ -1,0 +1,11 @@
+#
+# SVCL, OilService Model
+#
+# @see: http://www.mt-ag.com/fileadmin/user_upload/Spezial/MTAG-Implementation_and_Integration_of_a_DSL.pdf
+#
+
+Type,          1,   4, AN, R, Y, "S";
+CustomerID,    5,   5,  N, R, Y, " ";
+CustomerName, 10,  22, AN, R, Y, " ";
+TypeCode,     32,   2,  N, L, Y, " ";
+RequestText,  34,  22, AN, L, Y, " ";

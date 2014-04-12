@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/ufuchs/value-serializer/issues"
   },
-  "homepage": "https://github.com/ufuchs/value-serializer"
+  "homepage": "https://github.com/ufuchs/value-serializer",
+  "dependencies": {
+    "intl": "^0.1.2"
+  }
 }

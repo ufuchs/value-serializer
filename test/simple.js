@@ -1,31 +1,48 @@
+#!/usr/bin/env node
+
 /*jslint node:true, unparam:true*/
 
 'use strict';
 
 var serializer = require('../lib/value-serializer'),
-    descriptors = require('./orders.json').order,
-    order = serializer().createObjectFrom(descriptors),
+    Intl = require('intl'),
+    descriptors = require('./oilInvo.json').oilInvo,
+    invo = serializer().createObjectFrom(descriptors),
     serialized;
 
-console.log("\n1. Generate an empty 'order' object by use of 'order.json', the model");
-console.log("---------------------------------------------------------------------\n");
+console.log("\n1. Generate an empty 'invoice' object by use of 'oilInvo.json', the model");
+console.log("-------------------------------------------------------------------------\n");
 
-console.log(order);
+console.log(invo);
 
-console.log("\n2. Now fill in some data in your 'order' object");
-console.log("-----------------------------------------------\n");
 
-order.customerID = 1034056;
-order.orderID = 5670876;
-order.orderDate = new Date()
+console.log("\n2. Now fill in some data in your 'invoice' object");
+console.log("-------------------------------------------------\n");
+
+invo.customerID = 1034056;
+invo.invoiceDate = new Date()
     .toISOString()
     .replace(/^(\d{4})\-(\d{2})\-(\d{2})\S*$/, '$2/$3/$1');
-order.item = 'ATmega328P-PU';
-order.qty = 10;
-order.price = 2.02;
-order.note = "special customer with 5% discount";
+invo.invoiceAmount = 40.50;
+invo.text = "You will get 10% discount";
 
-console.log(order);
+console.log(invo);
+
+var            formatter = new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'USD',
+                minimumFractionDigits: 2,
+            });
+
+
+formatter.style = 'currency';
+
+console.log(new Intl.NumberFormat("de-DE",{maximumSignificantDigits: 3}).format(111111.00));
+
+
+
+
+/*
 
 console.log("\n4.0 Validate the 'order' object against model.");
 console.log("----------------------------------------------\n");
@@ -45,3 +62,4 @@ console.log("\n6.0 Deserialize the 'order' object from the generated output stri
 console.log("-------------------------------------------------------------------\n");
 
 console.log(serializer().deserialize(serialized, descriptors));
+*/

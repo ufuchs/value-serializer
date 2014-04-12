@@ -1,0 +1,12 @@
+#
+# INVO, OilInvoice Model
+#
+# @see: http://www.mt-ag.com/fileadmin/user_upload/Spezial/MTAG-Implementation_and_Integration_of_a_DSL.pdf
+#
+
+# fieldName, start, length, type, alignment, obligatory, fillChar
+Type,           1,   4, AN, R, Y, "I";
+CustomerID,     5,   5,  N, R, Y, " ";
+InvoiceDate,   10,  10, AN, R, Y, " ";
+InvoiceAmount, 20,   8,  N, L, Y, " ";
+Text,          28,  32, AN, L, Y, " ";
