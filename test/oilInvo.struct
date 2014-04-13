@@ -6,7 +6,7 @@
 
 # fieldName, start, length, type, alignment, obligatory, fillChar
 Type,           1,   4, AN, R, Y, "I";
-CustomerID,     5,   5,  N, R, Y, " ";
+CustomerID,     5,   5,  N, R, Y, "0";
 InvoiceDate,   10,  10, AN, R, Y, " ";
-InvoiceAmount, 20,   8,  N, L, Y, " ";
+InvoiceAmount, 20,   8,  C, R, Y, " ";
 Text,          28,  32, AN, L, Y, " ";
